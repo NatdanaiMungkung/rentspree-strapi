@@ -27,10 +27,7 @@
     {
       "method": "POST",
       "path": "/orders",
-      "handler": "order.create",
-      "config": {
-        "policies": []
-      }
+      "handler": "order.create"
     },
     {
       "method": "PUT",

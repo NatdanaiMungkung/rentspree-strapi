@@ -7,19 +7,26 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "test": "jest --forceExit --detectOpenHandles"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jest": "^26.6.2",
+    "sqlite3": "^5.0.0",
+    "supertest": "^6.0.0"
+  },
   "dependencies": {
     "strapi": "3.2.5",
     "strapi-admin": "3.2.5",
-    "strapi-utils": "3.2.5",
-    "strapi-plugin-content-type-builder": "3.2.5",
+    "strapi-connector-mongoose": "3.2.5",
     "strapi-plugin-content-manager": "3.2.5",
-    "strapi-plugin-users-permissions": "3.2.5",
+    "strapi-plugin-content-type-builder": "3.2.5",
     "strapi-plugin-email": "3.2.5",
     "strapi-plugin-upload": "3.2.5",
-    "strapi-connector-mongoose": "3.2.5"
+    "strapi-plugin-users-permissions": "3.2.5",
+    "strapi-connector-bookshelf": "3.2.5",
+    "knex": "<0.20.0",
+    "strapi-utils": "3.2.5"
   },
   "author": {
     "name": "A Strapi developer"
@@ -30,6 +37,14 @@
   "engines": {
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      ".tmp",
+      ".cache"
+    ],
+    "testEnvironment": "node"
   },
   "license": "MIT"
 }
