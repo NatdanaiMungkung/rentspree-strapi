@@ -20,6 +20,11 @@
 
 
 # Unit Test
+# IMPORTANT if you run on windows please modify `rent-spree\config\env\test\database.json` first
+- only if you run on windows, Change line 9 from `"filename": ".tmp/test.db",` -> `"filename": "/.tmp/data.db",`
+if you are on mac/linux can skip to next step
+
+
 - Run
 ```yarn test```
 
