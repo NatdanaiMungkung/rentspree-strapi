@@ -25,10 +25,12 @@
       "type": "richtext"
     },
     "stock": {
-      "type": "integer"
+      "type": "integer",
+      "default": 10
     },
     "enable": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     },
     "quantity": {
       "type": "integer",
