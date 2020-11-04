@@ -42,17 +42,40 @@ describe("Orders Suites", () => {
 
   it('should return order from POST request', async (done) => {
     await request(strapi.server) // app server is and instance of Class: http.Server
-      .post("/orders", {
+      .post("/orders")
+      .send({
         firstname: "test",
         lastname: 'myLastName',
         email: 'email@email.com',
         address: 'onnut',
-        products: '{}',
+        products: {
+          name: 'water'
+        },
       })
       .set("accept", "application/json")
       .set("Content-Type", "application/json")
       .expect("Content-Type", /json/)
       .expect(200)
+      .then((data) => {
+        expect(data.body).toBeDefined();
+      });
+
+    done();
+  })
+
+  it('should return 400 from invalid POST request', async (done) => {
+    await request(strapi.server) // app server is and instance of Class: http.Server
+      .post("/orders")
+      .send({
+        firstname: "test",
+        lastname: 'myLastName',
+        email: 'email@email.com',
+        address: 'onnut',
+      })
+      .set("accept", "application/json")
+      .set("Content-Type", "application/json")
+      .expect("Content-Type", /json/)
+      .expect(400)
       .then((data) => {
         expect(data.body).toBeDefined();
       });

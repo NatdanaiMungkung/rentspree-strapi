@@ -12,19 +12,24 @@
   },
   "attributes": {
     "firstname": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "lastname": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email": {
-      "type": "email"
+      "type": "email",
+      "required": true
     },
     "address": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "products": {
-      "type": "json"
+      "type": "json",
+      "required": true
     }
   }
 }
