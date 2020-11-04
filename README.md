@@ -1,5 +1,7 @@
 # Steps to run
 
+- Run ```cd rent-spree```
+
 - Run
 ```yarn install```
 
