@@ -16,6 +16,7 @@
 
 - Run
 ```yarn develop```
+- Access ```http://localhost:1337/admin``` and login with ```natdanai.mungkung@gmail.com:Pax12345678``` to play with back office
 
 
 # Unit Test
